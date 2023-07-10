@@ -1,6 +1,6 @@
 rm -rf ./build
-conan install ../conan -if build/Release -pr:b=../conan/profiles/gcc9_release -pr:h=../conan/profiles/gcc9_release --build missing
-conan install ../conan -if build/Debug   -pr:b=../conan/profiles/gcc9_debug -pr:h=../conan/profiles/gcc9_debug     --build missing
+conan install ../conan -if build/Release -s build_type=Release --build missing
+conan install ../conan -if build/Debug   -s build_type=Debug   --build missing
 
 source build/Release/conanbuild.sh
 cmake --preset release -B ./build/Release -S .
