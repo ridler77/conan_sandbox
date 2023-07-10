@@ -1,5 +1,5 @@
 [requires]
-# From common_cots folder after running pl_repo gradle handleDepends
+# Existing cots libs
 #boost-1.79.0
 #ceres-solver-2.0.0
 #dlib/19.24 # dlib-19.3 - range on conan is 19.19 to 19.24
