@@ -20,3 +20,4 @@ target_include_directories(${PROJECT_NAME}
    PUBLIC ${CMAKE_CURRENT_LIST_DIR}
    PRIVATE ${CMAKE_CURRENT_LIST_DIR}/internal_subproject
 )
+target_compile_features(${PROJECT_NAME} PUBLIC cxx_std_14)

@@ -8,6 +8,10 @@ project(
     LANGUAGES CXX
 )
 
+if (NOT TARGET messages)
+   add_subdirectory(${CMAKE_CURRENT_LIST_DIR}/../messages messages)
+endif()
+
 if (NOT TARGET project_lib)
    add_subdirectory(${CMAKE_CURRENT_LIST_DIR}/../project_lib project_lib)
 endif()
@@ -21,4 +25,6 @@ set(src
 
 add_executable(${PROJECT_NAME} ${src})
 target_include_directories(${PROJECT_NAME} PRIVATE ${CMAKE_CURRENT_LIST_DIR})
+target_link_libraries(${PROJECT_NAME} PRIVATE messages)
 target_link_libraries(${PROJECT_NAME} PRIVATE project_lib)
+target_compile_features(${PROJECT_NAME} PUBLIC cxx_std_14)

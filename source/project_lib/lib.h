@@ -16,8 +16,8 @@ class Lib
       Lib();
       Lib(Lib const &) = delete;
       Lib(Lib &&) = delete;
-      Lib & Lib::operator=(Lib const &) = delete;
-      Lib & Lib::operator=(Lib &&) = delete;
+      Lib & operator=(Lib const &) = delete;
+      Lib & operator=(Lib &&) = delete;
       ~Lib();
 
       void do_a_thing(int val);

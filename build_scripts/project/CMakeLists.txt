@@ -12,3 +12,10 @@ if (NOT TARGET project_lib)
    add_subdirectory(${CMAKE_CURRENT_LIST_DIR}/../../source/project_lib project_lib)
 endif()
 
+if (NOT TARGET messages)
+   add_subdirectory(${CMAKE_CURRENT_LIST_DIR}/../../source/messages messages)
+endif()
+
+if (NOT TARGET project_exe)
+   add_subdirectory(${CMAKE_CURRENT_LIST_DIR}/../../source/project_exe project_exe)
+endif()

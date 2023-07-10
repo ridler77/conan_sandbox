@@ -19,22 +19,26 @@
 #nanomsg-1.0.0
 #opencv-4.2.0
 #proj-6.2.0
-#protobuf-3.9.0
+protobuf/3.9.1 #protobuf-3.9.0
 #qt-5.11.1
 #sonar_tools-1-0.0.11
 #sqlite3-3.30.1
 #tiff-4.0.9
 #xerces-3.2.4
 #xerces-c/3.2.4
-#zlib-1.2.8
+#zlib/1.2.13 
 
 [tool_requires]
 cmake/3.26.4
+protobuf/3.9.1
 
 [generators]
 CMakeDeps
 CMakeToolchain
 VirtualBuildEnv
+
+[layout]
+#cmake_layout
 
 [options]
 #fftw:precision=single
