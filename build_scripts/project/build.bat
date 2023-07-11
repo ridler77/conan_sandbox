@@ -1,10 +1,10 @@
-conan install ../conan -if build -pr:b=../conan/profiles/msvc16_release_mt -pr:h=../conan/profiles/msvc16_release_mt --build missing
-conan install ../conan -if build -pr:b=../conan/profiles/msvc16_debug_mt -pr:h=../conan/profiles/msvc16_debug_mt --build missing
+rmdir /S /Q build
+conan install . -if build -of . -s build_type=Release --build missing
+conan install . -if build -of . -s build_type=Debug   --build missing
 
-call build\conanbuild.bat
-
-cmake --preset default -B ./build -S .
+call build\generators\conanbuild.bat
+cmake --preset default
 cmake --build ./build --config Release
 cmake --build ./build --config Debug
+call build\generators\deactivate_conanbuild.bat
 
-build/deactivate_conanbuild.bat
