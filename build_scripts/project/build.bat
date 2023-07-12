@@ -1,6 +1,6 @@
 rmdir /S /Q build
-conan install . -if build -of . -s build_type=Release --build missing
-conan install . -if build -of . -s build_type=Debug   --build missing
+conan install ../conan -if build -of . -s build_type=Release --build missing
+conan install ../conan -if build -of . -s build_type=Debug   --build missing
 
 call build\generators\conanbuild.bat
 cmake --preset default
